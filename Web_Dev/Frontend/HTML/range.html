@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Volume level</title>
+</head>
+<body>
+    <form action="/server">
+    Select Volume<br>
+    <label for="vol">Volume</label>
+    <input 
+    type="range" 
+    min="10" 
+    max="100" 
+    id="vol" 
+    name="Vol" 
+    step="10"
+    value="60">
+    <br>
+    <div>
+        <label for="Feedback">GIVE Your FeedBack</label>
+        <br>
+        <textarea id="FeedBack"name=feedback ></textarea>
+    </div>
+    <button type="submit"> OK </button>
+</form>
+</body>
+</html>
