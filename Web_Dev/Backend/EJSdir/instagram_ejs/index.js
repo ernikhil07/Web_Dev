@@ -3,7 +3,8 @@ const app=express();
 let port=8080;
 
 app.set("view engine","ejs");
-
+app.use(express.static("public/css"));
+app.use(express.static("public/java"))
 app.get("/ig/:username",(req,res)=>
 {
     let {username} =req.params;
