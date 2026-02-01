@@ -6,9 +6,15 @@ app.set("view engine","ejs");
 
 app.get("/ig/:username",(req,res)=>
 {
-    const followers=["adam","bob","steve","john"];
-    let {username}=req.params;
-    res.render("instagram.ejs",{username,followers});
+    let {username} =req.params;
+    const instadata=require("./data.json");
+    const data=instadata[username];
+    if(data){
+    res.render("instagram.ejs",{data});
+    }
+    else{
+        res.render("error.ejs");
+    }
 })
 app.listen(port,()=>
 {
